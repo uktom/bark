@@ -20,6 +20,13 @@
     min-height: 800px;
   }
 
+  @media screen and (min-width: 0\0) {
+    // IE9 CSS
+    min-height: 700px;
+  }
+
+
+
   &__icon {
     width: 2rem;
     height: 2rem;
@@ -43,6 +50,11 @@
       overflow-y: visible;
       justify-content: center;
       //position: relative;
+    }
+
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      min-height: 550px;
     }
 
     &__arrow {

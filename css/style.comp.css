@@ -396,6 +396,9 @@ h1 {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .bestsellers {
       min-height: 800px; } }
+  @media screen and (min-width: 0\0) {
+    .bestsellers {
+      min-height: 700px; } }
   .bestsellers__icon {
     width: 2rem;
     height: 2rem;
@@ -413,6 +416,9 @@ h1 {
       .bestsellers .slider {
         overflow-y: visible;
         justify-content: center; } }
+    @media screen and (min-width: 0\0) {
+      .bestsellers .slider {
+        min-height: 550px; } }
     @media only screen and (min-width: 56.25em) {
       .bestsellers .slider__arrow {
         position: absolute;
@@ -647,7 +653,8 @@ h1 {
   @media screen and (min-width: 0\0) {
     .card {
       float: left;
-      margin-left: 40px; } }
+      margin-left: 8rem;
+      margin-right: 0; } }
   @media only screen and (min-width: 75em) {
     .card--center {
       margin-top: 6rem; } }
@@ -679,6 +686,9 @@ h1 {
     @media only screen and (min-width: 75em) {
       .card .btn {
         transform: translateY(220%); } }
+    @media screen and (min-width: 0\0) {
+      .card .btn {
+        transform: translateY(0); } }
 
 .modal-container {
   background-color: rgba(0, 0, 0, 0.6);
