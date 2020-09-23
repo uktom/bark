@@ -36,7 +36,7 @@
     // IE9 CSS
     float: left;
     margin-left: 8rem;
-    margin-right:0
+    margin-right: 0;
   }
 
   &--center {
@@ -87,11 +87,9 @@
       transform: translateY(220%);
     }
 
-
     @media screen and (min-width: 0\0) {
       // IE9 CSS
       transform: translateY(0);
     }
-
   }
 }
