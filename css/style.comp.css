@@ -21,7 +21,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   color: #fff;
   font-size: 3rem;
-  padding: 2rem 0;
+  padding: 2rem;
   text-align: center;
   font-weight: normal;
   line-height: 3.5rem; }
@@ -54,7 +54,7 @@ h1 {
   display: none; }
 
 .header {
-  background-color: #95DBE5;
+  background-color: #95dbe5;
   border-radius: 0 0 90% 90% / 10%;
   overflow: hidden; }
   @media only screen and (min-width: 75em) {
@@ -72,10 +72,16 @@ h1 {
     display: flex;
     justify-content: center;
     background-image: url(/img/png/dog-hero.png);
-    background-size: 60%;
+    background-size: 70%;
     background-repeat: no-repeat;
-    background-position: 130% 110%;
-    min-height: 70vh; }
+    background-position: 135% 110%;
+    min-height: 500px; }
+    @media only screen and (min-width: 400px) {
+      .header__container {
+        min-height: 600px; } }
+    @media only screen and (min-width: 500px) {
+      .header__container {
+        min-height: 700px; } }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .header__container {
         background-image: url(/img/png/dog-hero@2x.png); } }
@@ -87,8 +93,7 @@ h1 {
         min-height: 40vh; } }
     @media only screen and (min-width: 37.5em) and (orientation: landscape) {
       .header__container {
-        background-size: 25%;
-        background-position: 25% 120%;
+        background-size: 30%;
         min-height: 80vh; } }
     @media only screen and (min-width: 56.25em) {
       .header__container {
@@ -200,7 +205,7 @@ h1 {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-right: 6rem;
+    margin-right: 5rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: #b7b7b7;
@@ -216,13 +221,13 @@ h1 {
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       cursor: pointer;
-      transition: color .2s ease; }
+      transition: color 0.2s ease; }
       .footer__nav li:hover {
         color: #000; }
     .footer__nav .active {
       color: #000; }
   .footer__wrap {
-    border-bottom: 1px solid #EAEAEA;
+    border-bottom: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem; }
@@ -307,7 +312,7 @@ h1 {
   padding: 1rem;
   display: flex;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   right: 3rem;
   z-index: 10; }
   .nav__btn .logo {
@@ -347,7 +352,7 @@ h1 {
     text-transform: uppercase;
     cursor: pointer;
     padding-bottom: 1rem;
-    transition: border .2s ease-in-out; }
+    transition: border 0.2s ease-in-out; }
     @media only screen and (min-width: 56.25em) {
       .nav ul li {
         font-size: 2rem;
@@ -392,16 +397,19 @@ h1 {
     width: 2rem;
     height: 2rem;
     margin-right: 1.5rem; }
+  .bestsellers .slider-wrap {
+    position: relative; }
   .bestsellers .slider {
     max-width: 1200px;
     margin: 0 auto 10rem auto;
     overflow-y: hidden;
-    display: flex; }
+    display: flex;
+    position: relative;
+    padding-bottom: 5rem; }
     @media only screen and (min-width: 56.25em) {
       .bestsellers .slider {
         overflow-y: visible;
-        justify-content: center;
-        position: relative; } }
+        justify-content: center; } }
     @media only screen and (min-width: 56.25em) {
       .bestsellers .slider__arrow {
         position: absolute;
@@ -412,6 +420,27 @@ h1 {
       left: 0; }
     .bestsellers .slider__arrow--next {
       right: 0; }
+    .bestsellers .slider__dots {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      @media only screen and (min-width: 56.25em) and (orientation: landscape) {
+        .bestsellers .slider__dots {
+          display: none; } }
+    .bestsellers .slider__dot {
+      display: block;
+      margin: 0 0.5em;
+      width: 1.5em;
+      height: 1.5em;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 100px; }
+      .bestsellers .slider__dot.active {
+        background: rgba(0, 0, 0, 0.7); }
+      @media only screen and (min-width: 37.5em) {
+        .bestsellers .slider__dot {
+          display: none; } }
 
 .testimonials {
   display: flex;
@@ -597,7 +626,7 @@ h1 {
   padding: 0 2rem 3rem 2rem;
   overflow: hidden;
   background-image: linear-gradient(180deg, #fff, #fff 40%, #e7f7f9 40%, #e7f7f9 100%);
-  transition: all .4s ease;
+  transition: all 0.4s ease;
   margin-right: 3rem; }
   @media only screen and (min-width: 37.5em) {
     .card {
@@ -636,12 +665,12 @@ h1 {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     font-family: "Open Sans", sans-serif;
-    letter-spacing: .18rem;
+    letter-spacing: 0.18rem;
     line-height: 2.2rem; }
   .card:hover .btn {
     transform: translateY(0); }
   .card .btn {
-    transition: all .4s ease; }
+    transition: all 0.4s ease; }
     @media only screen and (min-width: 75em) {
       .card .btn {
         transform: translateY(220%); } }
@@ -700,13 +729,13 @@ h1 {
     text-align: center;
     width: 100%;
     height: 40%;
-    background: url("/img/png/dog-popup.png"), #F2F1F6;
+    background: url("/img/png/dog-popup.png"), #f2f1f6;
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: contain; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .modal__header {
-        background: url("/img/png/dog-popup@2x.png"), #F2F1F6;
+        background: url("/img/png/dog-popup@2x.png"), #f2f1f6;
         background-position: 50% 100%;
         background-size: contain;
         background-repeat: no-repeat; } }
@@ -726,14 +755,14 @@ h1 {
       .modal__header {
         width: 50%;
         float: left;
-        background: url("/img/png/dog-popup.png"), #F2F1F6;
+        background: url("/img/png/dog-popup.png"), #f2f1f6;
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: bottom;
         height: 380px; } }
   .modal__close {
     position: absolute;
-    top: .5rem;
+    top: 0.5rem;
     right: 1.5rem;
     font-size: 3rem;
     z-index: 10;
@@ -757,8 +786,9 @@ h1 {
         float: right; } }
   .modal__form label {
     display: none; }
-  .modal__form input[type='text'], .modal__form input[type='email'] {
-    background: #E7F6F9;
+  .modal__form input[type="text"],
+  .modal__form input[type="email"] {
+    background: #e7f6f9;
     border: 0;
     border-radius: 3rem;
     padding: 2rem 3rem;
@@ -766,7 +796,8 @@ h1 {
     width: 100%;
     font-size: 1.4rem;
     border: 2px solid #fff; }
-    .modal__form input[type='text']:focus, .modal__form input[type='email']:focus {
+    .modal__form input[type="text"]:focus,
+    .modal__form input[type="email"]:focus {
       outline: none;
       border: 2px solid #FF5C00; }
   .modal__form .text {
