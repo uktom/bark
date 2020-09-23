@@ -40,7 +40,6 @@
   .slider {
     max-width: 1200px;
     margin: 0 auto 10rem auto;
-    //max-height: 500px;
     overflow-y: hidden;
     display: flex;
     position: relative;
@@ -49,7 +48,6 @@
     @include respond(tab-port) {
       overflow-y: visible;
       justify-content: center;
-      //position: relative;
     }
 
     @media screen and (min-width: 0\0) {
