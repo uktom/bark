@@ -821,6 +821,14 @@ h1 {
     width: 100%;
     font-size: 1.4rem;
     border: 2px solid #fff; }
+    @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+      .modal__form input[type="text"],
+      .modal__form input[type="email"] {
+        padding: 1rem 3rem; } }
+    @media only screen and (min-width: 56.25em) {
+      .modal__form input[type="text"],
+      .modal__form input[type="email"] {
+        padding: 1rem 3rem; } }
     .modal__form input[type="text"]:focus,
     .modal__form input[type="email"]:focus {
       outline: none;

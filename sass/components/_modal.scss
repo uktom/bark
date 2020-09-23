@@ -160,6 +160,13 @@
       font-size: 1.4rem;
       border: 2px solid #fff;
 
+      @include respond(phone-landscape) {
+        padding: 1rem 3rem;
+      }
+      @include respond(tab-port) {
+        padding: 1rem 3rem;
+      }
+
       &:focus {
         outline: none;
         border: 2px solid $color-secondary;
