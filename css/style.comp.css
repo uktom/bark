@@ -71,7 +71,7 @@ h1 {
   .header__container {
     display: flex;
     justify-content: center;
-    background-image: url(/img/png/dog-hero.png);
+    background-image: url(../img/png/dog-hero.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: 135% 110%;
@@ -84,7 +84,7 @@ h1 {
         min-height: 700px; } }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .header__container {
-        background-image: url(/img/png/dog-hero@2x.png); } }
+        background-image: url(../img/png/dog-hero@2x.png); } }
     @media only screen and (min-width: 37.5em) {
       .header__container {
         background-size: 40%;
@@ -729,13 +729,13 @@ h1 {
     text-align: center;
     width: 100%;
     height: 40%;
-    background: url("/img/png/dog-popup.png"), #f2f1f6;
+    background: url("../img/png/dog-popup.png"), #f2f1f6;
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: contain; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .modal__header {
-        background: url("/img/png/dog-popup@2x.png"), #f2f1f6;
+        background: url("../img/png/dog-popup@2x.png"), #f2f1f6;
         background-position: 50% 100%;
         background-size: contain;
         background-repeat: no-repeat; } }
@@ -755,7 +755,7 @@ h1 {
       .modal__header {
         width: 50%;
         float: left;
-        background: url("/img/png/dog-popup.png"), #f2f1f6;
+        background: url("../img/png/dog-popup.png"), #f2f1f6;
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: bottom;
