@@ -9,8 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Bark</title>
 </head>
 
@@ -53,52 +54,63 @@
                     src="img/svg/shape-paw.svg" alt="Paw"></span>Our Best Sellers</h2>
 
 
-        <div class="slider">
 
-            <div class="slider__arrow slider__arrow--prev"><img src="/img/svg/chevron-prev.svg" alt=""></div>
-            <div class="card">
-                <div class="card__img">
-                    <picture>
-                        <source srcset="img/png/product1.png 1x, img/png/product1@2x.png 2x"
-                            media="(max-width: 37.5em)">
-                        <img srcset="img/png/product1.png 1x, img/png/product1@2x.png 2x" src="img/png/product1.png"
-                            alt="Dog Food">
-                    </picture>
+        <div class="slider-wrap">
+            <div class="slider">
 
-                </div>
-                <p class="card__text">Natures Menu Dog Food Can Chicken</p>
-                <p class="card__price">£22.81</p>
-                <div class="btn">View More</div>
-            </div>
-            <div class="card card--center">
-                <div class="card__img">
-                    <picture>
-                        <source srcset="img/png/product2.png 1x, img/png/product2@2x.png 2x"
-                            media="(max-width: 37.5em)">
-                        <img srcset="img/png/product2.png 1x, img/png/product2@2x.png 2x" src="img/png/product2.png"
-                            alt="Dog Food">
-                    </picture>
-                </div>
-                <p class="card__text">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
-                <p class="card__price">£11.92</p>
-                <div class="btn">View More</div>
-            </div>
-            <div class="card">
-                <div class="card__img">
-                    <picture>
-                        <source srcset="img/png/product3.png 1x, img/png/product3@2x.png 2x"
-                            media="(max-width: 37.5em)">
-                        <img srcset="img/png/product3.png 1x, img/png/product3@2x.png 2x" src="img/png/product3.png"
-                            alt="Dog Treats">
-                    </picture>
+                <div class="slider__arrow slider__arrow--prev"><img src="/img/svg/chevron-prev.svg" alt=""></div>
+                <div class="card">
+                    <div class="card__img">
+                        <picture>
+                            <source srcset="img/png/product1.png 1x, img/png/product1@2x.png 2x"
+                                media="(max-width: 37.5em)">
+                            <img srcset="img/png/product1.png 1x, img/png/product1@2x.png 2x" src="img/png/product1.png"
+                                alt="Dog Food">
+                        </picture>
 
+                    </div>
+                    <p class="card__text">Natures Menu Dog Food Can Chicken</p>
+                    <p class="card__price">£22.81</p>
+                    <div class="btn">View More</div>
                 </div>
-                <p class="card__text">Real Meaty Dog Treats with Beef</p>
-                <p class="card__price">£2.09</p>
-                <div class="btn">View More</div>
+                <div class="card card--center">
+                    <div class="card__img">
+                        <picture>
+                            <source srcset="img/png/product2.png 1x, img/png/product2@2x.png 2x"
+                                media="(max-width: 37.5em)">
+                            <img srcset="img/png/product2.png 1x, img/png/product2@2x.png 2x" src="img/png/product2.png"
+                                alt="Dog Food">
+                        </picture>
+                    </div>
+                    <p class="card__text">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                    <p class="card__price">£11.92</p>
+                    <div class="btn">View More</div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <picture>
+                            <source srcset="img/png/product3.png 1x, img/png/product3@2x.png 2x"
+                                media="(max-width: 37.5em)">
+                            <img srcset="img/png/product3.png 1x, img/png/product3@2x.png 2x" src="img/png/product3.png"
+                                alt="Dog Treats">
+                        </picture>
+
+                    </div>
+                    <p class="card__text">Real Meaty Dog Treats with Beef</p>
+                    <p class="card__price">£2.09</p>
+                    <div class="btn">View More</div>
+                </div>
+                <div class="slider__arrow slider__arrow--next"><img src="/img/svg/chevron-next.svg" alt=""></div>
+
             </div>
-            <div class="slider__arrow slider__arrow--next"><img src="/img/svg/chevron-next.svg" alt=""></div>
+            <div class="slider__dots">
+                <a href="javascript:void(0)" class="slider__dot" data-pos="0"></a>
+                <a href="javascript:void(0)" class="slider__dot active" data-pos="1"></a>
+                <a href="javascript:void(0)" class="slider__dot" data-pos="2"></a>
+                <a href="javascript:void(0)" class="slider__dot" data-pos="3"></a>
+            </div>
         </div>
+
     </section>
 
     <section class="testimonials">
@@ -132,11 +144,6 @@
     </section>
 
     <footer class="footer">
-
-
-        <!-- <svg class="footer__logo" viewBox="0 0 101 28" class="icon">
-            <use xlink:href="img\svg\logo-black.svg#Home"></use>
-        </svg> -->
         <img class="footer__logo" src="img/svg/logo-black.svg" alt="Logo">
 
         <div class="footer__wrap">
@@ -156,7 +163,6 @@
                     <li>Bibendum</li>
                 </ul>
             </div>
-
 
             <div class="footer__socialwrap">
 
@@ -219,9 +225,8 @@
 
         </div>
     </div>
-    <script src="js/index.js"></script>
-    <script src="js/script.js"></script>
-
+    <!--[if IE 9 ]><script src="js/classlist-polyfill.js"></script><![endif]-->
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>

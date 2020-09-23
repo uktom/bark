@@ -1,104 +1,96 @@
 .nav {
+  @media screen and (min-width: 0\0) {
+    // IE9 CSS
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 40%;
+  }
 
+  &__btn {
+    background: $color-secondary;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 10;
 
-    @media screen and (min-width:0\0) { 
+    .logo {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0 0 90% 90% / 10%;
+    transition: opacity 0s ease;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+      transform: translate(0, 0);
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+
+    li {
+      font-size: 3rem;
+      line-height: 6rem;
+      color: #fff;
+      margin: 0 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding-bottom: 1rem;
+      transition: border 0.2s ease-in-out;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+        line-height: 4rem;
+      }
+
+      @media screen and (min-width: 0\0) {
         // IE9 CSS
-        position: absolute;
-        top: 20px;
-        right: 0;
-       width: 40%
-       }
+        width: 15%;
+        float: left;
+        font-size: 15px;
+      }
 
-
-   &__btn {
-       background: $color-secondary;
-        border-radius: 50%;
-        padding: 1rem;
-        display: flex;
-        position: absolute;
-        top:3rem;
-        right: 3rem;
-        z-index: 10;
-
-       .logo {
-           width: 3rem;
-           height: 3rem;
-       }
-
-       @include respond(tab-port) {
-        display: none;
-     }
-
-   }
-
-    ul {
-        list-style: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-        visibility: hidden;
-        border-radius: 0 0 90% 90% / 10%;
-        transition: opacity 0s ease;
-       
-        @include respond(tab-port) {
-            flex-direction: row;
-            transform: translate(0, 0);
-            position: relative;
-            opacity: 1;
-            visibility: visible;
-            left: 0;
-         }
-
-         
-        li {
-            font-size: 3rem;
-            line-height:6rem;
-            color: #fff;
-            margin: 0 1rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding-bottom: 1rem;
-            transition: border .2s ease-in-out;
-
-
-            @include respond(tab-port) {
-                font-size: 2rem;
-                line-height:4rem;
-             }
-
-             @media screen and (min-width:0\0) {
-                // IE9 CSS
-                width: 15%;
-               float: left;
-                font-size: 15px;
-               }
-
-            &:hover {
-                border-bottom: 2px solid $color-secondary;
-            }
-        }
-
-        .active {
-            border-bottom: 2px solid $color-secondary;
-            opacity: 0.6;
-        }
+      &:hover {
+        border-bottom: 2px solid $color-secondary;
+      }
     }
 
-    ul.visible {
-        opacity: 1;
-        visibility: visible;
-        background: $color-secondary;
-        height:85vh;
-        justify-content: center;
-        transition: opacity 1s ease;
-        z-index: 9;
+    .active {
+      border-bottom: 2px solid $color-secondary;
+      opacity: 0.6;
     }
-    
+  }
+
+  ul.visible {
+    opacity: 1;
+    visibility: visible;
+    background: $color-secondary;
+    height: 85vh;
+    justify-content: center;
+    transition: opacity 1s ease;
+    z-index: 9;
+  }
 }
-

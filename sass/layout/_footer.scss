@@ -1,208 +1,171 @@
 .footer {
-    padding: 0 2rem;
-    position: relative;
+  padding: 0 2rem;
+  position: relative;
 
-    &__logo {
-        fill: #000 !important;
-        height: 2rem;
-        position: absolute;
-        width: 101px;
-        height: 28px;
-        left: 2rem;
-        top: 0;
-       
-        @include respond(tab-port) {
-            left: 3rem;
-         }
+  &__logo {
+    fill: #000 !important;
+    height: 2rem;
+    position: absolute;
+    width: 101px;
+    height: 28px;
+    left: 2rem;
+    top: 0;
 
-       
+    @include respond(tab-port) {
+      left: 3rem;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    margin-top: 5rem;
+
+    @include respond(phone) {
+      flex: 0 0 40%;
     }
 
-    &__navigation {
-        display: flex;
-        margin-top: 5rem;
+    @include respond(tab-port) {
+      flex: 0 0 50%;
+      margin-top: 0;
+    }
+  }
 
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #b7b7b7;
+    letter-spacing: 1.384px;
+    font-family: $font-primary;
 
-        @include respond(phone) {
-            flex: 0 0 40%;
-        }
-
-        @include respond(tab-port) {
-            flex: 0 0 50%;
-            margin-top: 0;
-         }
-
-
-
-
+    @include respond(phone) {
+      margin-right: 3rem;
     }
 
-    &__nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-right: 6rem;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #b7b7b7;
-        letter-spacing: 1.384px;
-        font-family: $font-primary;
-
-
-        @include respond(phone) {
-            margin-right: 3rem;
-        }
-
-
-        @media screen and (min-width:0\0) {
-            // IE9 CSS
-            float: left;
-           }
-
-        li {
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            cursor:pointer;
-            transition: color .2s ease;
-
-            &:hover {
-                color: #000;
-            }
-        }
-
-        .active {
-            color: #000;
-        }
-
-       
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      float: left;
     }
 
+    li {
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s ease;
 
-
-    &__wrap {
-
-        border-bottom: 1px solid #EAEAEA;
-        display: flex;
-        flex-direction: column; 
-        margin-bottom: 3rem;
-        
-
-        @include respond(phone) {
-            margin-right:2rem;
-            margin-left: 0;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-         }
-
-         @include respond(tab-port) {
-            margin-right:2rem;
-            margin-left: 25rem;
-            justify-content: flex-start;
-         }
-
-
-         @include respond(desktop) {
-            margin-left: 35rem;
-         }
-
-         @media screen and (min-width:0\0) { 
-            // IE9 CSS
-            min-height: 200px
-           }
-
-
-         &--bottom {
-             border: 0;
-             @media screen and (min-width:0\0) {
-                // IE9 CSS
-                min-height: 20px
-                
-               }
-         }
+      &:hover {
+        color: #000;
+      }
     }
 
-    &__socialwrap {
+    .active {
+      color: #000;
+    }
+  }
 
-        //@include respond(tab-port) {
-            display: flex;
-            flex-direction: column;
-       // }
+  &__wrap {
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
 
+    @include respond(phone) {
+      margin-right: 2rem;
+      margin-left: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-       @media screen and (min-width:0\0) {
+    @include respond(tab-port) {
+      margin-right: 2rem;
+      margin-left: 25rem;
+      justify-content: flex-start;
+    }
+
+    @include respond(desktop) {
+      margin-left: 35rem;
+    }
+
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      min-height: 200px;
+    }
+
+    &--bottom {
+      border: 0;
+      @media screen and (min-width: 0\0) {
         // IE9 CSS
-        float: right;
-        margin-right: 200px;
-       }
+        min-height: 20px;
+      }
+    }
+  }
+
+  &__socialwrap {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      float: right;
+      margin-right: 200px;
+    }
+  }
+
+  &__signup {
+    color: $color-secondary;
+    font-size: 2.4rem;
+    font-family: $font-display;
+    cursor: pointer;
+
+    .logo {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &__icons {
+    cursor: pointer;
+
+    .logo {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &__paymenticons {
+    .logo {
+      width: 3.4rem;
+      height: 3.4rem;
     }
 
+    margin-bottom: 3rem;
 
-
-    &__signup {
-        color: $color-secondary;
-        font-size: 2.4rem;
-        font-family: $font-display;
-        cursor: pointer;
-
-        .logo {
-            width: 2rem;
-            height: 2rem; 
-            margin-left: 2rem; 
-        }
+    @include respond(phone) {
+      flex: 0 0 60%;
+      margin-bottom: 0;
     }
 
-
-    &__icons {
-        // padding-bottom: 6rem;
-        cursor: pointer;
-        
-        .logo {
-            width: 2rem;
-            height: 2rem;
-            margin-right: 2rem;
-        }
+    @media screen and (min-width: 0\0) {
+      float: left;
     }
+  }
 
+  &__copyright {
+    color: #7c7c7c;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: $font-display;
 
-    &__paymenticons {
-
-        .logo {
-            width: 3.4rem;
-            height: 3.4rem;  
-        }
-
-        margin-bottom: 3rem;
-
-
-
-        @include respond(phone) {
-            flex: 0 0 60%;
-            margin-bottom: 0;
-         }
-
-
-         @media screen and (min-width:0\0) {
-             float: left;
-         }
-
-
+    @media screen and (min-width: 0\0) {
+      float: right;
+      padding-top: 10px;
+      margin-right: 200px;
     }
-
-    &__copyright {
-        color: #7c7c7c;
-        font-size: 1.4rem;
-        font-weight: 300;
-        font-family: $font-display;
-
-
-
-        @media screen and (min-width:0\0) {
-            float: right;
-            padding-top: 10px; 
-            margin-right: 200px;       
-        }
-    }
-
-
+  }
 }

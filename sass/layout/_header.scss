@@ -1,190 +1,173 @@
 .header {
-    background-color: #95DBE5;
-   border-radius: 0 0 90% 90% / 10%;
+  background-color: #95dbe5;
+  border-radius: 0 0 90% 90% / 10%;
 
-   //clip-path: ellipse(130px 140px at 10% 20%);
+  //clip-path: ellipse(130px 140px at 10% 20%);
+
+  overflow: hidden;
+
+  @include respond(desktop) {
+    border-radius: 0 0 90% 90% / 20%;
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      position: relative;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/png/dog-hero.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 135% 110%;
+    min-height: 500px;
+
+    @media only screen and (min-width: 400px) {
+      min-height: 600px;
+    }
     
-    overflow: hidden;
+    @media only screen and (min-width: 500px) {
+      min-height: 700px;
+    }
 
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      & {
+        background-image: url(/img/png/dog-hero@2x.png);
+      }
+    }
+
+    @include respond(phone) {
+      background-size: 40%;
+      background-position: 25% 120%;
+      position: relative;
+      min-height: 40vh;
+    }
+
+    @include respond(phone-landscape) {
+      background-size: 30%;
+      //background-position: 25% 150%;
+      min-height: 80vh;
+    }
+
+    @include respond(tab-port) {
+      background-size: 50%;
+      background-position: 25% 120%;
+      min-height: 60vh;
+    }
+
+    @include respond(tab-landscape) {
+      background-size: 40%;
+      background-position: 25% 120%;
+      min-height: 70vh;
+    }
 
     @include respond(desktop) {
-        border-radius: 0 0 90% 90% / 20%;
+      background-size: 40%;
+      background-position: 30% 150%;
+      min-height: 80vh;
+    }
+    @include respond(big-desktop) {
+      background-size: 30%;
+      background-position: 30% 150%;
+      min-height: 80vh;
     }
 
-
-
-    &__bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3rem 2rem;
-
-
-
-        
-        @media screen and (min-width:0\0) {
-            // IE9 CSS
-            position: relative; 
-           }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      // IE10/11 CSS
+      background-size: contain;
+      background-position: 20% bottom;
     }
 
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      background-size: contain;
+      background-position: 20% bottom;
+    }
+  }
 
-    &__container {
-        display: flex;
-        justify-content: center;
-        background-image: url(/img/png/dog-hero.png);
-        background-size: 60%;
-        background-repeat: no-repeat;
-        background-position: 130% 110%;
-        min-height: 70vh;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
 
-
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-            & {
-                background-image: url(/img/png/dog-hero@2x.png);
-            }
-            }
-
-
-           
-        @include respond(phone) {
-            background-size: 40%;
-            background-position: 25% 120%;
-            position: relative;
-            min-height: 40vh;
-        }
-
-        @include respond(phone-landscape) {
-            background-size: 25%;
-            background-position: 25% 120%;
-            min-height: 80vh;
-        }
-
-        @include respond(tab-port) {
-            background-size: 50%;
-            background-position: 25% 120%;
-            min-height: 60vh;
-        }
-
-
-        @include respond(tab-landscape) {
-            background-size: 40%;
-            background-position: 25% 120%;
-            min-height: 70vh;
-        }
-
-        @include respond(desktop) {
-            background-size: 40%;
-            background-position: 30% 150%;
-            min-height: 80vh;
-        }
-        @include respond(big-desktop) {
-            background-size: 30%;
-            background-position: 30% 150%;
-            min-height: 80vh;
-        }
-
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            // IE10/11 CSS
-            background-size: contain;
-            background-position: 20% bottom;
-          }
-
-          @media screen and (min-width:0\0) {
-            // IE9 CSS
-            background-size: contain;
-            background-position: 20% bottom;
-           }
-
-
+    @include respond(phone) {
+      position: absolute;
+      width: 332px;
+      left: 50%;
+      top: 30%;
+      padding: 0;
     }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 3rem;
-
-
-
-        @include respond(phone) {
-            position: absolute;
-            width: 332px;
-            left: 50%;
-            top: 30%;
-            padding: 0; 
-        }
-
-        @include respond(phone-landscape) {
-            width: 332px;
-            left: 45%;
-            top: 20%;
-            padding: 0; 
-        }
-        @include respond(tab-port) {
-           // width: 332px;
-            left: 60%;
-            top: 40%;
-            padding: 0; 
-        }
-
-
-        @include respond(desktop) {
-            width: 432px;
-        }
-
-        @include respond(big-desktop) {
-            //width: 432px;
-           // height: 112px;
-            left: 943px;
-            top: 189px;
-        }
-
-
-         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-             // IE10 CSS
-             left: 50%;
-          }
-
-            @media screen and (min-width:0\0) { 
-          // IE9 CSS
-             left: 50%;
-             top: 30%;
-             width: 282px;
-           }
-
-          .heading-primary {
-            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                // IE10/11 CSS
-                width:80%;
-                font-size: 3rem;
-                left: 40%;
-              }
-
-              @media screen and (min-width:0\0) { 
-                // IE9 CSS
-                width:80%;
-                font-size: 3rem;
-                left: 40%;
-               }
-
-
-          }
-
-
+    @include respond(phone-landscape) {
+      width: 332px;
+      left: 45%;
+      top: 20%;
+      padding: 0;
+    }
+    @include respond(tab-port) {
+      // width: 332px;
+      left: 60%;
+      top: 40%;
+      padding: 0;
     }
 
+    @include respond(desktop) {
+      width: 432px;
+    }
 
-    &__logo {
-     // LOGO
+    @include respond(big-desktop) {
+      //width: 432px;
+      // height: 112px;
+      left: 943px;
+      top: 189px;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      // IE10 CSS
+      left: 50%;
+    }
+
+    @media screen and (min-width: 0\0) {
+      // IE9 CSS
+      left: 50%;
+      top: 30%;
+      width: 282px;
+    }
+
+    .heading-primary {
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // IE10/11 CSS
+        width: 80%;
+        font-size: 3rem;
+        left: 40%;
+      }
+
+      @media screen and (min-width: 0\0) {
+        // IE9 CSS
+        width: 80%;
+        font-size: 3rem;
+        left: 40%;
+      }
+    }
+  }
+
+  &__logo {
+    // LOGO
     .logo {
-        height: 3.25rem;
-        margin-left: 1rem;
-        position: relative;
-        z-index:10;
+      height: 3.25rem;
+      margin-left: 1rem;
+      position: relative;
+      z-index: 10;
     }
-    }
-
+  }
 }
-
-  
