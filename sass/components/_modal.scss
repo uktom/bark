@@ -36,6 +36,11 @@
     max-width: 80%;
   }
 
+  @include respond(phone-landscape) {
+    height: 90vh;
+    max-width: 80%;
+  }
+
   @include respond(tab-port) {
     height: 30vh;
   }

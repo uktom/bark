@@ -66,6 +66,10 @@
         line-height: 4rem;
       }
 
+      @include respond(phone-landscape) {
+        padding-bottom: 0;
+      }
+
       @media screen and (min-width: 0\0) {
         // IE9 CSS
         width: 15%;

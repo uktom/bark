@@ -360,6 +360,9 @@ h1 {
       .nav ul li {
         font-size: 2rem;
         line-height: 4rem; } }
+    @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+      .nav ul li {
+        padding-bottom: 0; } }
     @media screen and (min-width: 0\0) {
       .nav ul li {
         width: 15%;
@@ -722,6 +725,10 @@ h1 {
       overflow: hidden;
       display: flex;
       height: 40vh;
+      max-width: 80%; } }
+  @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+    .modal {
+      height: 90vh;
       max-width: 80%; } }
   @media only screen and (min-width: 56.25em) {
     .modal {
