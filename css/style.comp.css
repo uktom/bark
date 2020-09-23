@@ -356,13 +356,16 @@ h1 {
     cursor: pointer;
     padding-bottom: 1rem;
     transition: border 0.2s ease-in-out; }
+    @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+      .nav ul li {
+        padding-bottom: 0; } }
     @media only screen and (min-width: 56.25em) {
       .nav ul li {
         font-size: 2rem;
         line-height: 4rem; } }
-    @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+    @media only screen and (min-width: 56.25em) and (orientation: landscape) {
       .nav ul li {
-        padding-bottom: 0; } }
+        padding-bottom: 1rem; } }
     @media screen and (min-width: 0\0) {
       .nav ul li {
         width: 15%;
