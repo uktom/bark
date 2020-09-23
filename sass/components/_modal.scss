@@ -1,0 +1,197 @@
+.modal-container {
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+
+.modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: absolute;
+    
+    overflow-y: scroll;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width:100%;
+    height: 80vh;
+    margin: 0 auto;
+    animation: modalopen 2s;
+
+
+    @include respond(phone) {
+        overflow: hidden;
+        display: flex;
+        height: 40vh;
+        max-width: 80%;
+    }
+
+    @include respond(tab-port) {
+        height: 30vh;
+    }
+
+     @include respond(tab-landscape) {
+         height: 50vh;
+     }
+
+    @include respond(desktop) {
+        height: 40vh;
+        max-width: 50%;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // IE10/11 CSS
+        min-height: 400px;
+      }
+
+      @media screen and (min-width:0\0) {
+        // IE9 CSS
+        min-height: 380px;
+       }
+
+
+    &__header {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 40%;
+        background: url('/img/png/dog-popup.png'), #F2F1F6;
+
+
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: contain;
+
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+            & {
+                 background: url('/img/png/dog-popup@2x.png'), #F2F1F6;
+                 background-position: 50% 100%;
+                 background-size: contain;
+                 background-repeat: no-repeat;
+            }
+            }
+
+
+        @include respond(phone) {
+            flex: 0 0 50%;
+            align-items: center;
+            height: auto;
+            background-size: 80%;
+        }
+
+        @include respond(tab-port) {
+            background-size: 60%;
+        }
+
+        @include respond(big-desktop) {
+            background-size: 50%;
+        }
+
+
+        @media screen and (min-width:0\0) {
+            // IE9 CSS
+            width: 50%;
+            float: left;
+            background: url('/img/png/dog-popup.png'), #F2F1F6;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: bottom;
+            height: 380px;
+           }
+
+
+    }
+
+    &__close {
+        position: absolute;
+        top: .5rem;
+        right: 1.5rem;
+        font-size: 3rem;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    &__content {
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @include respond(desktop) {
+            align-items: center;
+            width: 100%;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            // IE10/11 CSS
+           width: 50%;
+          }
+
+          @media screen and (min-width:0\0) {
+            // IE9 CSS
+            width: 50%;
+            float: right;
+           }
+
+    }
+
+
+    &__form {
+
+        label {
+            display: none;
+        }
+
+        input[type='text'], input[type='email'] {
+            background: #E7F6F9;
+            border: 0;
+            border-radius: 3rem;
+            padding: 2rem 3rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: 1.4rem;
+            border: 2px solid #fff;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $color-secondary;
+            }
+        }
+
+        
+        .text {
+            color: #7c7c7c;
+            margin: 2rem 0 3rem 0;
+        }
+
+        .btn {
+            border: 0;
+        }
+    }
+
+}
+
+
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

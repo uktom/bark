@@ -1,0 +1,310 @@
+.bestsellers {
+    //height: 100vh;
+    padding: 5rem 2rem;
+    text-align: center;
+
+
+    @include respond(phone) {
+        min-height: 600px;
+        height: 50vh;
+    }
+
+    @include respond(tab-port) {
+        height: 55vh;
+    }
+
+    @include respond(desktop) {
+        height: 75vh;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // IE10/11 CSS
+        min-height: 800px;
+      }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1.5rem;
+    }
+
+
+    .slider {
+
+        max-width: 1200px;
+        margin: 0 auto 10rem auto;
+        //max-height: 500px;
+        overflow-y:hidden;
+        display: flex;
+
+        @include respond(tab-port) {
+           overflow-y: visible;
+            justify-content: center;
+            position: relative;
+        }
+
+
+        
+
+        &__arrow {
+
+            @include respond(tab-port) {
+                position: absolute;
+                top: 30%;
+                width: 30px;
+                cursor: pointer;
+            }
+
+            &--prev {
+                left: 0;
+            }
+
+            &--next {
+                right:0
+            }
+        }
+    }
+
+
+}
+
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem 5rem 2rem;
+
+    @include respond(tab-port) {
+       flex-direction: row;
+       max-width: 120rem;
+       margin: 5rem auto 5rem auto;
+    }
+
+    @media screen and (min-width:0\0) { 
+        // IE9 CSS
+        min-height:500px
+       }
+
+
+    &__img {
+        position: relative;
+        min-height: 320px;
+
+        @include respond(tab-port) {
+            flex:0 0 50%
+         }
+
+         @media screen and (min-width:0\0) {
+             // IE9 CSS
+            width: 50%;
+            float: left;
+           }
+
+
+
+        &--1 {
+            position: absolute;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-65%, -75%);
+            @include respond(tab-port) {
+                height: 260px;
+             }
+        }
+        &--2 {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            height: 240px;
+            @include respond(tab-port) {
+                height: 300px;
+             }
+        }
+        &--3 {
+            position: absolute;
+            top:48%;
+            left:51%;
+            transform: translate(-50%, -50%);
+            height: 260px;
+            @include respond(tab-port) {
+                height: 320px;
+             }
+        }
+
+
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        @include respond(tab-port) {
+            align-items: flex-start;
+            flex: 0 0 40%;
+         }
+
+         @media screen and (min-width:0\0) {
+             // IE9 CSS
+            width: 40%;
+            float: left;
+           }
+
+         
+    }
+
+    p {
+        color: #c7c7c7;
+        font-weight: 300;
+        text-align: center;
+        line-height: 2.4rem;
+        max-width: 464px;
+        @include respond(tab-port) {
+            text-align: left;
+         }
+
+    }
+}
+
+
+.delivery {
+    background: url('../img/png/pattern-mobile.png');
+    background-position: center center;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // IE10/11 CSS
+        position: relative;
+      }
+    
+      @media screen and (min-width:0\0) { 
+        // IE9 CSS
+        position: relative;
+       }
+
+
+    @include respond(phone) {
+        //background-size: cover;
+        //background-repeat: no-repeat;
+        background: url('../img/png/pattern-desktop.png');
+        //background-size: contain;
+        min-height: 30vh;
+        background-position: 50% 50%;
+        background-size: 100% 100%;
+     }
+
+      @include respond(phone-landscape) {
+         min-height: 70vh;
+      }
+
+    // @include respond(tab-port) {
+         //min-height: 30vh;
+    //     background-size: cover;
+    //     background-position: center center;
+     // }
+
+      @include respond(tab-landscape) {
+         min-height: 50vh;
+      }
+
+    //  @include respond(desktop) {
+    //      min-height: 60vh;
+    //   }
+
+     @include respond(big-desktop) {
+         min-height: 60vh;
+      }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 3rem;
+
+
+        @include respond(phone-landscape) {
+            margin-bottom: 2rem;
+         } 
+
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+         } 
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 160px;
+
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            // IE10/11 CSS
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+          }
+
+          @media screen and (min-width:0\0) { 
+            // IE9 CSS
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+           }
+
+        @include respond(phone-landscape) {
+            margin-top: -2rem;
+         } 
+
+        @include respond(tab-port) {
+            max-width: 280px;
+            margin-top: 0;
+         }
+    
+         .heading-secondary {
+             margin-bottom: 3rem;
+
+             @include respond(phone-landscape) {
+                margin-bottom: 2rem;
+             } 
+
+             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                width:80%
+              }
+
+
+         }
+
+    }
+
+    &__info {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        font-weight: 300;
+        font-family: $font-display;
+        color: #7c7c7c;
+
+        @include respond(desktop) {
+            font-size: 1.4rem;
+         }
+
+         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+             // IE10/11 CSS
+            width:80%
+          }
+
+    }
+}

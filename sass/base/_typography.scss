@@ -1,0 +1,38 @@
+
+h1 {
+    margin: 0;
+}
+
+
+.heading-primary {
+    font-family: $font-display;
+    color: #fff;
+    font-size: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-weight: normal;
+    line-height: 3.5rem;
+
+
+    @include respond(desktop) {
+        font-size: 4.8rem;
+        line-height: 5.25rem;
+    }
+
+
+}
+
+.heading-secondary {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    font-family: $font-display;
+    font-weight: normal;
+    color: #000;
+
+
+    @include respond(desktop) {
+        font-size: 2.8rem;
+        line-height: 3.25rem;
+    }
+
+}

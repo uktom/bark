@@ -1,0 +1,27 @@
+
+@mixin respond($breakpoint) {
+   
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 37.5em) { @content }; // min-width 600px
+  }
+
+  @if $breakpoint == phone-landscape {
+    @media only screen and (min-width: 37.5em ) and (orientation: landscape) { @content }; // min-width 600px & landscape
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (min-width: 56.25em) { @content }; // min-width 900px
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media only screen and (min-width: 56.25em) and (orientation: landscape) { @content }; // min-width 900px & landscape
+  }
+
+    @if $breakpoint == desktop {
+      @media only screen and (min-width: 75em) { @content }; // min-width 1200px
+    }
+
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content }; // min-width 1800px
+    }
+  }
