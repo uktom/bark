@@ -100,5 +100,12 @@
     justify-content: center;
     transition: opacity 1s ease;
     z-index: 9;
+
+    @include respond(phone-landscape) {
+      padding-top: 3rem;
+    }
+    @include respond(tab-port) {
+      padding: 0;
+    }
   }
 }

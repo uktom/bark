@@ -385,6 +385,12 @@ h1 {
   justify-content: center;
   transition: opacity 1s ease;
   z-index: 9; }
+  @media only screen and (min-width: 37.5em) and (orientation: landscape) {
+    .nav ul.visible {
+      padding-top: 3rem; } }
+  @media only screen and (min-width: 56.25em) {
+    .nav ul.visible {
+      padding: 0; } }
 
 .bestsellers {
   padding: 5rem 2rem;
