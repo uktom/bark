@@ -161,14 +161,17 @@ h1 {
         left: 50%;
         top: 30%;
         width: 282px; } }
+    @media screen and (min-width: 0\0) {
+      .header__content .btn {
+        margin: 0 auto; } }
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .header__content .heading-primary {
-        width: 80%;
+        width: 100%;
         font-size: 3rem;
         left: 40%; } }
     @media screen and (min-width: 0\0) {
       .header__content .heading-primary {
-        width: 80%;
+        width: 100%;
         font-size: 3rem;
         left: 40%; } }
   .header__logo .logo {

@@ -144,17 +144,24 @@
       width: 282px;
     }
 
+      .btn {
+        @media screen and (min-width: 0\0) {
+          margin: 0 auto
+        }
+      }
+
+
     .heading-primary {
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         // IE10/11 CSS
-        width: 80%;
+        width: 100%;
         font-size: 3rem;
         left: 40%;
       }
 
       @media screen and (min-width: 0\0) {
         // IE9 CSS
-        width: 80%;
+        width: 100%;
         font-size: 3rem;
         left: 40%;
       }
